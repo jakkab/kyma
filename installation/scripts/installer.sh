@@ -41,6 +41,8 @@ kubectl apply -f ${RESOURCES_DIR}/default-sa-rbac-role.yaml
 bash ${CURRENT_DIR}/is-ready.sh kube-system k8s-app kube-dns
 bash ${CURRENT_DIR}/install-tiller.sh
 
+echo "PROW!!!"
+
 if [ $LOCAL ]; then
     INSTALLER="${RESOURCES_DIR}/installer-local.yaml"
     INSTALLER_CONFIG="${RESOURCES_DIR}/installer-config-local.yaml.tpl"
